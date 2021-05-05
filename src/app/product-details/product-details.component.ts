@@ -18,10 +18,12 @@ export class ProductDetailsComponent implements OnInit {
     // first get product id
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number( routeParams.get('productId') );
-    console.log( productIdFromRoute );
 
     // find correct product in products
     this.product = products.find( product => product.id === productIdFromRoute );
   }
 
+  addToCart(product): void {
+
+  }
 }
